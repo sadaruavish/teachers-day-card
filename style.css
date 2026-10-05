@@ -316,3 +316,18 @@ button:hover {
     background: #8fbc8f;
     color: #081008;
 }
+.from {
+    margin-top: 35px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #cfc4ad;
+    line-height: 1.8;
+}
+
+.from span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #d8b15b;
+}
