@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, "Times New Roman", serif;
+    background:
+        radial-gradient(circle at top, #3b2a12, #100c06 55%, #050403);
+    color: #f5e7c5;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 650px;
+    min-height: 780px;
+    padding: 70px 45px;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid rgba(218, 177, 83, 0.6);
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(55, 39, 17, 0.96),
+            rgba(14, 10, 5, 0.98)
+        );
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.8),
+        inset 0 0 60px rgba(218, 177, 83, 0.08);
+
+    animation: appear 1.2s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    border: 1px solid rgba(218, 177, 83, 0.25);
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.book {
+    font-size: 65px;
+    margin-bottom: 25px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.small-title {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #d8b15b;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 58px;
+    line-height: 1.05;
+    font-weight: normal;
+    color: #fff4d7;
+}
+
+h1 span {
+    color: #d8b15b;
+    font-style: italic;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background: #d8b15b;
+    margin: 30px auto;
+}
+
+.message {
+    max-width: 500px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #d8d0c1;
+}
+
+.thankyou {
+    margin-top: 30px;
+    font-size: 19px;
+    color: #e7c878;
+}
+
+button {
+    margin-top: 35px;
+    padding: 14px 28px;
+
+    border: 1px solid #d8b15b;
+    border-radius: 30px;
+
+    background: transparent;
+    color: #f5dfaa;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d8b15b;
+    color: #171006;
+    transform: translateY(-3px);
+}
+
+.hidden {
+    display: none;
+}
+
+#specialMessage {
+    margin: 25px auto 0;
+    max-width: 450px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: rgba(216, 177, 91, 0.1);
+    border: 1px solid rgba(216, 177, 91, 0.3);
+
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #eee2c9;
+
+    animation: messageIn 0.6s ease;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    font-family: Arial, sans-serif;
+    color: #b99a57;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes messageIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .card {
+        min-height: 700px;
+        padding: 55px 25px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .book {
+        font-size: 50px;
+    }
+
+    .message {
+        font-size: 14px;
+    }
+
+    .small-title {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+    }
+    .Jayantha-Madam {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #e7c878;
+}
+    .teacher-photo {
+    width: 150px;
+    height: 150px;
+    margin: 25px auto;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid #d8b15b;
+    box-shadow: 0 0 25px rgba(216, 177, 91, 0.35);
+}
+
+.teacher-photo img {
+    width: 101%;
+    height: 102%;
+    object-fit: cover;
+    border-radius: 60%;
+    display: block;
+}
+.floating-elements {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.floating-elements span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 25px;
+    opacity: 0.7;
+    animation: floatUp 8s linear infinite;
+}
+
+.floating-elements span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-elements span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.floating-elements span:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.floating-elements span:nth-child(4) {
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.floating-elements span:nth-child(5) {
+    left: 75%;
+    animation-delay: 3s;
+}
+
+.floating-elements span:nth-child(6) {
+    left: 90%;
+    animation-delay: 5s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+    .whatsapp-btn {
+    margin-left: 10px;
+    border-color: #8fbc8f;
+}
+
+.whatsapp-btn:hover {
+    background: #8fbc8f;
+    color: #081008;
+}
